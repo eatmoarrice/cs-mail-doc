@@ -50,11 +50,13 @@ Let's get started:
 
 ### Server side
 
+When developing a full-stack web, it is common to have the web's backend develop prior to front-end. One of the main reason is that it would be easier to have database ready when implementing the front-end logic of the web.
+
 **Project setup**
 
 - [Setup with express-generator](/doc/server/00_setup_project.md)
 - [Project structure](/doc/server/01_project_structure.md)
-- [Design the endpoints](/doc/server/03_design_endpoints.md)
+<!-- - [Design the endpoints](/doc/server/03_design_endpoints.md)
 - [Design database schema](/doc/server/04_design_schema.md)
 - [Adding Mongoose middlewares](/doc/server/05_mongoose_middlewares.md)
 - [Create Postman collection](/doc/server/06_create_postman_collection.md)
@@ -67,4 +69,4 @@ Let's get started:
 - [Review APIs](/doc/server/10_review_apis.md)
 - [Reaction API](/doc/server/11_reaction_api.md)
 - [User APIs](/doc/server/12_user_apis.md)
-- [Friendship APIs](/doc/server/13_friendship_apis.md)
+- [Friendship APIs](/doc/server/13_friendship_apis.md) -->
