@@ -56,6 +56,8 @@ When developing a full-stack web, it is common to have the web's backend develop
 
 - [Setup with express-generator](/doc/server/00_setup_project.md)
 - [Project structure](/doc/server/01_project_structure.md)
+- [Setup app](/doc/server/02_setup_app_js.md)
+
 <!-- - [Design the endpoints](/doc/server/03_design_endpoints.md)
 - [Design database schema](/doc/server/04_design_schema.md)
 - [Adding Mongoose middlewares](/doc/server/05_mongoose_middlewares.md)
