@@ -58,17 +58,12 @@ When developing a full-stack web, it is common to have the web's backend develop
 - [Project structure](/doc/server/01_project_structure.md)
 - [Setup app](/doc/server/02_setup_app_js.md)
 - [Design the endpoints](/doc/server/03_design_endpoints.md)
-- [Design database schema](/doc/server/04_design_schema.md)
-- [Adding Mongoose middlewares](/doc/server/05_mongoose_middlewares.md)
-- [Create Postman collection](/doc/server/06_create_postman_collection.md)
-<!--
+- [Design database schema](/doc/server/04_design_database.md)
+- [Adding Mongoose middlewares](/doc/server/05_mongoose_middleware.md)
 
 **Basic Features**
 
-- [Register user account and validators](/doc/server/07_register_user.md)
-- [User can log in](/doc/server/08_login.md)
-- [Blog APIs](/doc/server/09_blog_apis.md)
-- [Review APIs](/doc/server/10_review_apis.md)
-- [Reaction API](/doc/server/11_reaction_api.md)
-- [User APIs](/doc/server/12_user_apis.md)
-- [Friendship APIs](/doc/server/13_friendship_apis.md) -->
+- [Register user account ](/doc/server/06_register_user.md)
+- [User can log in](/doc/server/07_login.md)
+- [Blog APIs](/doc/server/08_messages_apis.md)
+- [User APIs](/doc/server/9_user_apis.md)
