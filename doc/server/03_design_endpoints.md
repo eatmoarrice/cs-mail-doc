@@ -7,8 +7,7 @@ The very first step is identifying the objects which will be presented as resour
 - auth: for authentication process
 - message: everything about message (create, read, update, delete)
 - user: CRUD of user accounts
-
-Next, it's time to decide the resource URIs which are endpoints of our RESTful services. Think about the relationship between resources and its sub-resources (e.g. Message, User , Auth). Example
+  Next, it's time to decide the resource URIs which are endpoints of our RESTful services. Think about the relationship between resources and its sub-resources (e.g. Message, User , Auth). Example
 
 ```javascript
 /**
@@ -68,18 +67,6 @@ const router = express.Router();
  * @access Public
  */
 
-/**
- * @route POST api/auth/login/facebook
- * @description Login with facebook
- * @access Public
- */
-
-/**
- * @route POST api/auth/login/google
- * @description Login with google
- * @access Public
- */
-
 module.exports = router;
 ```
 
@@ -90,138 +77,27 @@ const express = require("express");
 const router = express.Router();
 
 /**
+ * @route POST api/messages/
+ * @description User can send message
+ * @access Public
+ */
+
+/**
+ * @route PUT api/messages/
+ * @description User can update content of message
+ * @access Login requied
+ */
+
+/**
  * @route GET api/messages?page=1&limit=10
- * @description Get messages with pagination
+ * @description User can get a list of messages
  * @access Public
  */
 
 /**
  * @route GET api/messages/:id
- * @description Get a single message
+ * @description User can send message
  * @access Public
- */
-
-/**
- * @route POST api/messages
- * @description Create a new message
- * @access Login required
- */
-
-/**
- * @route PUT api/messages/:id
- * @description Update a message
- * @access Login required
- */
-
-/**
- * @route DELETE api/messages/:id
- * @description Delete a message
- * @access Login required
- */
-
-module.exports = router;
-```
-
-- Create `/routes/friendship.api.js`:
-
-```javascript
-const express = require("express");
-const router = express.Router();
-
-/**
- * @route POST api/friends/add/:id
- * @description Send a friend request to an user
- * @access Login required
- */
-
-/**
- * @route DELETE api/friends/add/:id
- * @description Cancel a friend request to an user
- * @access Login required
- */
-
-/**
- * @route GET api/friends/add
- * @description Get the list of friend requests that are sent by the user
- * @access Login required
- */
-
-/**
- * @route GET api/friends/manage
- * @description Get the list of received friend requests
- * @access Login required
- */
-
-/**
- * @route GET api/friends
- * @description Get the list of friends
- * @access Login required
- */
-
-/**
- * @route POST api/friends/manage/:id
- * @description Accept a friend request from an user
- * @access Login required
- */
-
-/**
- * @route DELETE api/friends/manage/:id
- * @description Decline a friend request from an user
- * @access Login required
- */
-
-/**
- * @route DELETE api/friends/:id
- * @description Remove a friend
- * @access Login required
- */
-
-module.exports = router;
-```
-
-- Create `/routes/reaction.api.js`:
-
-```javascript
-const express = require("express");
-const router = express.Router();
-
-/**
- * @route POST api/reactions
- * @description Save a reaction to message or review
- * @access Login required
- */
-
-module.exports = router;
-```
-
-- Create `/routes/review.api.js`:
-
-```javascript
-const express = require("express");
-const router = express.Router();
-
-/**
- * @route GET api/reviews/messages/:id?page=1&limit=10
- * @description Get reviews of a message with pagination
- * @access Public
- */
-
-/**
- * @route POST api/reviews/messages/:id
- * @description Create a new review for a message
- * @access Login required
- */
-
-/**
- * @route PUT api/reviews/:id
- * @description Update a review
- * @access Login required
- */
-
-/**
- * @route DELETE api/reviews/:id
- * @description Delete a review
- * @access Login required
  */
 
 module.exports = router;
@@ -234,27 +110,21 @@ const express = require("express");
 const router = express.Router();
 
 /**
- * @route POST api/users
- * @description Register new user
+ * @route POST api/users/
+ * @description User can register for a new account
  * @access Public
  */
 
 /**
- * @route PUT api/users/
- * @description Update user profile
- * @access Login required
- */
-
-/**
  * @route GET api/users/me
- * @description Get current user info
- * @access Login required
+ * @description Return current user info
+ * @access Access Token required
  */
 
 /**
- * @route GET api/users?page=1&limit=10
- * @description Get users with pagination
- * @access Login required
+ * @route GET api/users/:id/messages
+ * @description Return list of messages sent to current user
+ * @access Public
  */
 
 module.exports = router;
@@ -277,18 +147,6 @@ router.use("/auth", authApi);
 // messageApi
 const messageApi = require("./message.api");
 router.use("/messages", messageApi);
-
-// reviewApi
-const reviewApi = require("./review.api");
-router.use("/reviews", reviewApi);
-
-// reactionApi
-const reactionApi = require("./reaction.api");
-router.use("/reactions", reactionApi);
-
-// friendshipApi
-const friendshipApi = require("./friendship.api");
-router.use("/friends", friendshipApi);
 
 module.exports = router;
 ```

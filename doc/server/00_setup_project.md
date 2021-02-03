@@ -23,7 +23,7 @@
   ```bash
   npm i dotenv cors
   npm i mongoose
-  npm i jsonwebtoken bcryptjs express-validator
+  npm i jsonwebtoken bcryptjs
   ```
 
 - Remove everything in `public/`
