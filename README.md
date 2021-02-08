@@ -66,4 +66,4 @@ When developing a full-stack web, it is common to have the web's backend develop
 - [Register user account ](/doc/server/06_register_user.md)
 - [User can log in](/doc/server/07_login.md)
 - [Message APIs (Routes, Controllers)](/doc/server/08_messages_apis.md)
-- [User APIs (Routes, Controllers)](/doc/server/9_user_apis.md)
+- [User APIs (Routes, Controllers)](/doc/server/09_user_apis.md)
