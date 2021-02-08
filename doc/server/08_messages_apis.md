@@ -1,8 +1,8 @@
-## Blog APIs
+## Message APIs
 
-In this step we will implement CRUD process for blogs.
+In this step we will implement CRUD process for messages.
 
-- Create `/controllers/blog.controller.js`:
+- Create `/controllers/message.controller.js`:
 
 ```jsx
 const utilsHelper = require("../helpers/utils.helper");
@@ -22,14 +22,7 @@ messageController.sendMessage = async (req, res, next) => {
       title,
       body,
     });
-    utilsHelper.sendResponse(
-      res,
-      200,
-      true,
-      { message },
-      null,
-      "Login success"
-    );
+    utilsHelper.sendResponse(res, 200, true, { message }, null, "Message sent");
   } catch (error) {
     next(error);
   }
@@ -83,7 +76,7 @@ messageController.getListOfMessage = async (req, res, next) => {
       true,
       { messages, totalPages },
       null,
-      "Login success"
+      "Get all message"
     );
   } catch (error) {
     next(error);
@@ -103,7 +96,7 @@ messageController.getSingleMessage = async (req, res, next) => {
       true,
       { message },
       null,
-      "Login success"
+      "Get single message"
     );
   } catch (error) {
     next(error);
@@ -113,7 +106,7 @@ messageController.getSingleMessage = async (req, res, next) => {
 module.exports = messageController;
 ```
 
-- In `routes/blog.api.js`:
+- In `routes/message.api.js`:
 
 ```jsx
 const express = require("express");

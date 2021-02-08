@@ -21,9 +21,7 @@
 - Install dependencies:
 
   ```bash
-  npm i dotenv cors
-  npm i mongoose
-  npm i jsonwebtoken bcryptjs
+  npm i dotenv cors mongoose jsonwebtoken bcryptjs
   ```
 
 - Remove everything in `public/`

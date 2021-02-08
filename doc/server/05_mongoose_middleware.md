@@ -17,7 +17,6 @@ When someone log in, the system will generate a new access token for that user. 
   const jwt = require("jsonwebtoken");
   const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
   //...
-  userSchema.plugin(require("./plugins/isDeletedFalse"));
 
   userSchema.methods.toJSON = function () {
     const obj = this._doc;

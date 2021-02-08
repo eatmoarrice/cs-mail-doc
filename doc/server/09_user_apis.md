@@ -26,7 +26,7 @@ userController.register = async (req, res, next) => {
 
     user = await User.create({ name, email, password });
 
-    utilsHelper.sendResponse(res, 200, true, { user }, null, "Login success");
+    utilsHelper.sendResponse(res, 200, true, { user }, null, "Created account");
   } catch (error) {
     next(error);
   }

@@ -48,8 +48,8 @@ But if user want to write a message, they need to login, so the endpoint will be
 ```javascript
 /**
  * @route POST api/messages
- * @description Create a new message
- * @access Login required
+ * @description Send a messages
+ * @access  Public
  */
 ```
 
@@ -84,7 +84,7 @@ const router = express.Router();
 
 /**
  * @route PUT api/messages/
- * @description User can update content of message
+ * @description update content of message
  * @access Login requied
  */
 
@@ -96,7 +96,7 @@ const router = express.Router();
 
 /**
  * @route GET api/messages/:id
- * @description User can send message
+ * @description User see a message detail
  * @access Public
  */
 

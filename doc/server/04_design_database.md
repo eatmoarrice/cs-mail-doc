@@ -28,9 +28,9 @@ Our mail app, has 2 schemas, which is enough for us to start building some basic
   module.exports = Message;
   ```
 
-  You can see that we have `isDeleted` flag which has a boolean value. The idea is we will not permanently delete the blog. If user want to delete a blog, we turn the `isDeleted` value to `true`. It's quite common to keep the "important" data like this example.
+  You can see that we have `isDeleted` flag which has a boolean value. The idea is we will not permanently delete the message. If user want to delete a message, we turn the `isDeleted` value to `true`. It's quite common to keep the "important" data like this example.
 
-  Then when user browse blogs, we only return blogs with `isDeleted` is `false`. To automate that we integrate a mongoose plugin for the Blog schema:
+  Then when user browse messages, we only return messages with `isDeleted` is `false`. To automate that we integrate a mongoose plugin for the message schema:
 
 - Create `models/User.js`:
 
