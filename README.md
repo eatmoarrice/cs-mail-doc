@@ -2,25 +2,22 @@
 
 This is a documentation of how to create web application in MERN stack **from scratch**. The app allow user to send email to other users within the app platform. This is project is a good excercise for building one of your familiarize with the Mongo database.
 
-<!-- A demo is worth a thousand words: [Demo App](https://social-blog-cs.netlify.app/) -->
-
 ## Features
 
 - User management and login flow
 - State management with redux
-- Send and receive Emails
+- CRUD for messages
 - Error handling and notification
-- Email Template and settings
 - And more..
 
 ## Implementation
 
-<!-- ### Client side
+### Client side
 
-We will use a already deployed backend API which you will learn soon (the server side):
+We will use our newly built Apis from the previous BackEnd instructions:
 
 ```
-https://social-blog-cs.herokuapp.com
+https://localhost:5000
 ```
 
 **[API Documentation](./doc/api_doc.md)**
@@ -29,24 +26,21 @@ Let's get started:
 
 **Project setup**
 
-* [Setup a React App](/doc/client/00_setup_project.md)
-* [Project Structure](/doc/client/01_project_structure.md)
-* [Redux configuration](/doc/client/02_redux_config.md)
-* [React Router and layouts](/doc/client/03_routes_layouts.md)
+- [Setup a React App](/doc/client/00_setup_project.md)
+- [Project Structure](/doc/client/01_project_structure.md)
+- [Redux configuration](/doc/client/02_redux_config.md)
+- [Private route setting](/doc/client/03_routes_layouts.md)
+  `Redux`
+- [Setting up Constant](/doc/client/04_setup_constant.md)
+- [Setting up Actions](/doc/client/05_setup_actions.md)
+- [Setting up Reducers](/doc/client/06_setup_reducers.md)
 
 **Basic Features**
 
-* [User can see a list of blogs in the home page](/doc/client/04_get_blogs.md)
-* [Redirect on successful async redux action](/doc/client/05_redirect_to.md)
-* [User can register a new account](/doc/client/06_register.md)
-* [User can log in with an account](/doc/client/07_login.md)
-* [User can log out](/doc/client/08_logout.md)
-* [Persist login state on refresh](/doc/client/09_persist_login.md)
-* [The Blog Detail Page](/doc/client/10_blog_detail.md)
-* [User can write review to a blog](/doc/client/11_blog_review.md)
-* [User can give an emoji reaction to a review or a blog](/doc/client/12_emoji_reaction.md)
-* [Authenticated user can create/edit/delete blogs](/doc/client/13_blog_crud.md)
- -->
+- [Stateless components](/doc/client/07_components.md)
+- [User can log in](/doc/client/08_login.md)
+- [Notfound page](/doc/client/09_notfound.md)
+- [The register page](/doc/client/10_register_page.md)
 
 ### Server side
 
